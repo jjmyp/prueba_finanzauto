@@ -1,5 +1,21 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# Usabilidad
+
+Agregar usuario:
+   *Presionar en el boton "+" para adicionarlo
+   *Rellenar información de formulario
+ 
+   Editar Usuario:
+   *Ingresar al detalle del usuario y presionar botton "Edit"
+   *Deslizar el usuario en el listado hacia el lado derecho y aparecera un boton "Editar"
+
+   Eliminar Usuario:
+   *Deslizar el usuario en el listado hacia el lado izquierdo y aparecera un boton "eliminar"
+
+
+
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

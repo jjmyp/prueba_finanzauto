@@ -14,6 +14,7 @@ const userService = {
         },
         body: JSON.stringify(userData),
       });
+      console.log(response, 'QAUI ASD');
 
       if (!response.ok) {
         throw new Error('Error al agregar el usuario');
@@ -28,7 +29,7 @@ const userService = {
 
   getUsers: async () => {
     try {
-      const response = await fetch(API_URL , {
+      const response = await fetch(API_URL +'?page=9&limit=10', {
         headers: {
           'app-id': API_KEY,
         },

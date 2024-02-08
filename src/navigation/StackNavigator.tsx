@@ -5,6 +5,8 @@ import {
 } from '@react-navigation/stack';
 import {Easing} from 'react-native';
 import pages from '../pages';
+import HeaderScreen from '../components/HeaderScreen';
+import { colores } from '../styles/colores';
 
 export type RootStackParamList = {
   UserPage: undefined;
@@ -26,6 +28,10 @@ export const StackNavigator = () => {
         headerStyle: {
           elevation: 0,
           backgroundColor: 'transparent',
+        },
+        header: ({options}) => {
+          console.log(options.title);
+          return <HeaderScreen title={options.title} color={colores.primary} />;
         },
         cardStyle: {
           backgroundColor: 'white',
@@ -52,17 +58,17 @@ export const StackNavigator = () => {
       }}>
       <Stack.Screen
         name="UserPage"
-        options={{title: 'User', headerShown: false}}
+        options={{title: 'Inicio'}}
         component={pages.UserPage}
       />
       <Stack.Screen
         name="AddUserPage"
-        options={{title: 'Add User', headerShown: false}}
+        options={{title: 'Crear usuario'}}
         component={pages.AddUserPage}
       />
       <Stack.Screen
         name="DetailUserPage"
-        options={{title: 'Detail User', headerShown: false}}
+        options={{title: 'Detalle de registro'}}
         component={pages.DetailUserPage}
       />
     </Stack.Navigator>

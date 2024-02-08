@@ -13,6 +13,7 @@ import {RootStackParamList} from '../navigation/StackNavigator';
 import ButtonFab from '../components/ButtonFab';
 import ItemList from '../components/user/ItemList';
 import { User } from '../interfaces/User';
+import { colores } from '../styles/colores';
 
 type UserProps = StackScreenProps<RootStackParamList, 'UserPage'>;
 
@@ -61,6 +62,7 @@ export const UserPage = ({navigation}: UserProps) => {
       <FlatList
         data={users}
         keyExtractor={item => item.id}
+        // style={{borderRadius: 20,}}
         renderItem={({item}) => (
           <ItemList
             user={item}
@@ -70,7 +72,7 @@ export const UserPage = ({navigation}: UserProps) => {
 
         )}
       />
-      <ButtonFab title="+" position="right" onPress={() => navigation.navigate('AddUserPage', {id: '0'})} />
+      <ButtonFab color={colores.primary} title="+" position="right" onPress={() => navigation.navigate('AddUserPage', {id: '0'})} />
     </View>
   );
 };
@@ -78,6 +80,7 @@ export const UserPage = ({navigation}: UserProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 10,
   },
   loadingContainer: {
     flex: 1,
